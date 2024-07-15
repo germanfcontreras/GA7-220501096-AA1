@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Carrot</title>
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+   <nav class="navbar">
+      <div class="name">
+         <a href="index.html" style="font-family: algerian">Tienda Abarrotes</a>
+         <!-- Nombre -->
+      </div>
+      <ul>	
+         <li>
+            <a href="index.html">Inicio</a>
+         </li>
+	     <li>
+            <a href="#">Compra</a>
+            <ul>
+               <li>
+                  <a href="index.html">Vegetales</a>
+               </li>
+		       <li>
+                  <a href="pulses.html">Tienda</a>
+               </li>
+		    </ul>
+         </li>
+	     <li>
+            <a href="about.html">Qui&eacute;nes Somos</a>
+         </li>
+	     <li>
+            <a href="contact.php">Cont&aacute;ctanos</a>
+         </li>
+	     <li>
+            <a href="cart.html">Carro<span></span></a>
+         </li>
+      </ul>
+   </nav>
+ 
+   <div style="background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)) ,url(images/bg_2.jpg);width: 100%;
+	height: 90vh; background-size: 100%;background-repeat: no-repeat;">
+
+   <h2
+      style="position: absolute; top: 50%;left: 50%;transform: translate(-50%,-50%);font-size: 7vw;background-size: 100%;text-align: center;margin: 0;padding: 0; ">
+      Mi carro</h2>
+   </div>
+
+  <section class="cart">
+    <table class="table">
+      <thead class="thead-primary">
+        <tr class="text-center">
+          <th style="padding-right: 140px; padding-left: 26em; padding-top: 25px;">Producto</th>
+          <th style="padding-right: 75px;padding-top: 25px;">Precio</th>
+          <th style="padding-right: 130px;padding-top: 25px;">Cantidad</th>
+          <th style="padding-right: 60px;padding-top: 25px;">Total</th>
+        </tr>
+      </thead>
+    </table>
+
+    <div class="product"> </div>
+  </section>
+  
+  <div class="productConitainer">
+  </div>
+  <div class="totals">
+  </div>
+ 
+  <footer>
+      <p style="padding-top: 10px;">Dise&ntilde;ado y mantenido por <b style=" color: #000;">
+         JAMES LEANDRO LOZADA ROMERO & GERMAN FLECHAS CONTRERAS</b>
+      </p>
+   </footer>
+
+</body>
+<script src="main.js"></script>
+<script type="text/javascript">
+   let totala = document.querySelector(".totals");
+   ta = localStorage.getItem('totalCost');
+   totala.innerHTML += `<div style="background-color:#000;"><h1 style="text-align: center;	font-size: 65px;">
+   TOTAL = ${ta} </h1></div>`
+</script>
+</html>
